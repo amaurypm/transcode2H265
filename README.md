@@ -22,3 +22,6 @@ Simple do:
 
 It has some options (type `transcode2H265 -h` to see them), but defaults should work in most cases. Maybe you would like to play with the `-l` option, if you are a perfectionist as myself.
 
+## It is just in English?
+In English and Spanish, depending of your locale. I just speak this two languages, so, if you like it in other, you can always contribute...
+
