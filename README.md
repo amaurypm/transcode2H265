@@ -23,7 +23,8 @@ Just do:
 It has some options (type `transcode2H265 -h` to see them), but defaults should work in most cases. Maybe you would like to play with the `-l` option, if you are a perfectionist as myself.
 
 ### Options
-`positional arguments:
+```
+positional arguments:
   video                 Input video file(s)
 
 optional arguments:
@@ -58,7 +59,8 @@ optional arguments:
   -c, --auto-crop       Autocrop output files [default: False]. WARNING: Use
                         with caution as some video files has variable width
                         horizontal (and vertical) black bars, in those cases
-                        you will probably lose data.`
+                        you will probably lose data.
+```
 
 ## Is it just in English?
 In English and Spanish, depending of your locale. I just speak this two languages, so, if you like it in other, you can always contribute...
