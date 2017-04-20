@@ -22,6 +22,44 @@ Just do:
 
 It has some options (type `transcode2H265 -h` to see them), but defaults should work in most cases. Maybe you would like to play with the `-l` option, if you are a perfectionist as myself.
 
+### Options
+`positional arguments:
+  video                 Input video file(s)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PRESET, --preset PRESET
+                        X265 preset [default: medium].
+  -q CRF, --crf CRF     CRF value [default: 28]. Determines the output video
+                        quality. Smaller values gives better qualities and
+                        bigger file sizes, bigger values result in less
+                        quality and smaller file sizes. Default value results
+                        in a nice quality/size ratio. CRF values should be in
+                        the range of 1 to 50.
+  -r, --replace-original-video-file
+                        If True original video files will be erased after
+                        transcoding [default: False]. WARNING: deleted files
+                        can not be easily recovered!
+  -l AVLANG, --avlang AVLANG
+                        Default audio language for MKV files obtained (used
+                        only if the original stream languages fail to be
+                        determined) [default: eng].
+  -L SLANG, --slang SLANG
+                        Default subtitle language of soft-subbed subtitles
+                        (only used if original subtitle languages fail to be
+                        determined) [default: spa].
+  -x FILENAME_POSTFIX, --filename-postfix FILENAME_POSTFIX
+                        Postfix to be added to newly created H.265 video files
+                        [default: _h265].
+  -t THREADS, --threads THREADS
+                        Indicates the number of processor cores the script
+                        will use. 0 indicates to use as many as possible
+                        [default: 0].
+  -c, --auto-crop       Autocrop output files [default: False]. WARNING: Use
+                        with caution as some video files has variable width
+                        horizontal (and vertical) black bars, in those cases
+                        you will probably lose data.`
+
 ## Is it just in English?
 In English and Spanish, depending of your locale. I just speak this two languages, so, if you like it in other, you can always contribute...
 
