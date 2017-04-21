@@ -25,10 +25,10 @@ It has some options (type `transcode2H265 -h` or see below), but defaults should
 ### Options
 ```
 positional arguments:
-  video                 Input video file(s)
+  video                 Input video file(s).
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit.
   -p PRESET, --preset PRESET
                         X265 preset [default: medium].
   -q CRF, --crf CRF     CRF value [default: 28]. Determines the output video
@@ -38,9 +38,9 @@ optional arguments:
                         in a nice quality/size ratio. CRF values should be in
                         the range of 1 to 50.
   -r, --replace-original-video-file
-                        If True original video files will be erased after
-                        transcoding [default: False]. WARNING: deleted files
-                        can not be easily recovered!
+                        If set then original video files will be erased after
+                        transcoding. WARNING: deleted files can not be easily
+                        recovered!
   -l AVLANG, --avlang AVLANG
                         Default audio language for MKV files obtained (used
                         only if the original stream languages fail to be
@@ -56,10 +56,11 @@ optional arguments:
                         Indicates the number of processor cores the script
                         will use. 0 indicates to use as many as possible
                         [default: 0].
-  -c, --auto-crop       Autocrop output files [default: False]. WARNING: Use
-                        with caution as some video files has variable width
-                        horizontal (and vertical) black bars, in those cases
-                        you will probably lose data.
+  -c, --auto-crop       Turn on autocrop function. WARNING: Use with caution
+                        as some video files has variable width horizontal (and
+                        vertical) black bars, in those cases you will probably
+                        lose data.
+  -v, --version         Show program's version number and exit.
 ```
 
 ## Is it just in English?
