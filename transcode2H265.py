@@ -201,6 +201,9 @@ class Video:
         if self.__ffmpeg_output:
             ffmpeg_output_root=os.path.splitext(self.__ffmpeg_output)[0].replace(self.__ffmpeg_output_postfix,'')
             mkv_output=ffmpeg_output_root+self.__output_postfix+'.mkv'
+            while os.path.isfile(mkv_output):
+                mkv_output = mkv_output.replace(self.__output_postfix, '_' + self.__output_postfix)
+
             if not self.__avlang:
                 self.__avlang = self.__default_avlang
                 
