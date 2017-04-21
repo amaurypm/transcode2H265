@@ -88,7 +88,8 @@ class Video:
             for line in cproc.stderr.split('\n'):
                 line=line.strip()
                 if ('Video' in line) and ('Stream' in line):
-                    self.__in_ok=True
+                    if 'ansi' not in line:
+                        self.__in_ok=True
                     
                 if ('Audio' in line) and ('Stream' in line):
                     if '(' in line.split(':')[1]:
