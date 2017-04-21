@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 14:05-0400\n"
-"PO-Revision-Date: 2017-04-21 14:05-0400\n"
+"POT-Creation-Date: 2017-04-21 14:29-0400\n"
+"PO-Revision-Date: 2017-04-21 14:33-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -170,8 +170,8 @@ msgid "Input video file(s)"
 msgstr "Fichero(s) de video de entrada"
 
 #: transcode2H265.py:442
-msgid "show this help message and exit"
-msgstr "muestra este mensaje de ayuda y sale"
+msgid "Show this help message and exit."
+msgstr "Muestra este mensaje de ayuda y sale."
 
 #: transcode2H265.py:443
 #, python-format
@@ -194,14 +194,13 @@ msgstr ""
 "entre 1 y 50."
 
 #: transcode2H265.py:445
-#, python-format
 msgid ""
-"If True original video files will be erased after transcoding [default: "
-"%(default)s]. WARNING: deleted files can not be easily recovered!"
+"If set then original video files will be erased after transcoding. WARNING: "
+"deleted files can not be easily recovered!"
 msgstr ""
-"Si True (verdadero) los videos de origen van a ser eliminados luego de una "
-"transcodificación exitosa [valor por defecto: %(default)s]. ¡ADVERTENCIA: "
-"los ficheros eliminados no pueden ser recuperados con facilidad!"
+"Si se especifica esta opción los videos originales van a ser borrados "
+"después de terminada la transcodificación. ALERTA: ¡Los videos borrados no "
+"pueden ser recuperados con facilidad!"
 
 #: transcode2H265.py:446
 #, python-format
@@ -244,20 +243,18 @@ msgstr ""
 "%(default)s]."
 
 #: transcode2H265.py:450
-#, python-format
 msgid ""
-"Autocrop output files [default: %(default)s]. WARNING: Use with caution as "
-"some video files has variable width horizontal (and vertical) black bars, in "
-"those cases you will probably lose data."
+"Turn on autocrop function. WARNING: Use with caution as some video files has "
+"variable width horizontal (and vertical) black bars, in those cases you will "
+"probably lose data."
 msgstr ""
-"Autorecortar ficheros de salida [valor por defecto: %(default)s]. "
-"ADVERTENCIA: Esta opción debe de ser utilizada con cautela pues algunos "
-"videos tienen barras negras horizontales (y/o verticales) de ancho variable, "
-"y en esos casos usted puede perder información del video."
+"Enciende la función de recorte automático. ALERTA: Use esta opción con "
+"cautela pues algunos videos poseen barras negras horizontales y/o verticales "
+"de ancho variable y en estos casos probablemente usted pierda información."
 
 #: transcode2H265.py:451
-msgid "show program's version number and exit"
-msgstr "muestra la versión del programa y sale"
+msgid "Show program's version number and exit."
+msgstr "Muestra la versión del programa y sale."
 
 #: transcode2H265.py:456
 msgid "CRF values should be in the range of 1 to 50."
@@ -286,6 +283,31 @@ msgstr "Trabajo finalizado en {}."
 #: transcode2H265.py:487
 msgid "Exiting OK."
 msgstr "Finalizando OK."
+
+#~ msgid "show this help message and exit"
+#~ msgstr "muestra este mensaje de ayuda y sale"
+
+#~ msgid ""
+#~ "If True original video files will be erased after transcoding [default: "
+#~ "%(default)s]. WARNING: deleted files can not be easily recovered!"
+#~ msgstr ""
+#~ "Si True (verdadero) los videos de origen van a ser eliminados luego de "
+#~ "una transcodificación exitosa [valor por defecto: %(default)s]. "
+#~ "¡ADVERTENCIA: los ficheros eliminados no pueden ser recuperados con "
+#~ "facilidad!"
+
+#~ msgid ""
+#~ "Autocrop output files [default: %(default)s]. WARNING: Use with caution "
+#~ "as some video files has variable width horizontal (and vertical) black "
+#~ "bars, in those cases you will probably lose data."
+#~ msgstr ""
+#~ "Autorecortar ficheros de salida [valor por defecto: %(default)s]. "
+#~ "ADVERTENCIA: Esta opción debe de ser utilizada con cautela pues algunos "
+#~ "videos tienen barras negras horizontales (y/o verticales) de ancho "
+#~ "variable, y en esos casos usted puede perder información del video."
+
+#~ msgid "show program's version number and exit"
+#~ msgstr "muestra la versión del programa y sale"
 
 #~ msgid "show program version number and exit"
 #~ msgstr "muestra la versión del programa y sale"

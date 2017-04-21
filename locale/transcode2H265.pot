@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 14:05-0400\n"
+"POT-Creation-Date: 2017-04-21 14:29-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,7 +155,7 @@ msgid "Input video file(s)"
 msgstr ""
 
 #: transcode2H265.py:442
-msgid "show this help message and exit"
+msgid "Show this help message and exit."
 msgstr ""
 
 #: transcode2H265.py:443
@@ -173,10 +173,9 @@ msgid ""
 msgstr ""
 
 #: transcode2H265.py:445
-#, python-format
 msgid ""
-"If True original video files will be erased after transcoding [default: "
-"%(default)s]. WARNING: deleted files can not be easily recovered!"
+"If set then original video files will be erased after transcoding. WARNING: "
+"deleted files can not be easily recovered!"
 msgstr ""
 
 #: transcode2H265.py:446
@@ -208,15 +207,14 @@ msgid ""
 msgstr ""
 
 #: transcode2H265.py:450
-#, python-format
 msgid ""
-"Autocrop output files [default: %(default)s]. WARNING: Use with caution as "
-"some video files has variable width horizontal (and vertical) black bars, in "
-"those cases you will probably lose data."
+"Turn on autocrop function. WARNING: Use with caution as some video files has "
+"variable width horizontal (and vertical) black bars, in those cases you will "
+"probably lose data."
 msgstr ""
 
 #: transcode2H265.py:451
-msgid "show program's version number and exit"
+msgid "Show program's version number and exit."
 msgstr ""
 
 #: transcode2H265.py:456
