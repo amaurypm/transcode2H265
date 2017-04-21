@@ -1,47 +1,43 @@
-# Translations template for PROJECT.
-# Copyright (C) 2016 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-12-27 12:07-0300\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-21 14:05-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
 
-#: transcode2H265.py:34
+#: transcode2H265.py:35
 msgid "usage"
 msgstr ""
 
-#: transcode2H265.py:35
+#: transcode2H265.py:36
 msgid "positional arguments"
 msgstr ""
 
-#: transcode2H265.py:36
+#: transcode2H265.py:37
 msgid "optional arguments"
 msgstr ""
 
-#: transcode2H265.py:38
-msgid "show this help message and exit"
-msgstr ""
-
-#: transcode2H265.py:39
+#: transcode2H265.py:40
 msgid "error"
 msgstr ""
 
-#: transcode2H265.py:41
+#: transcode2H265.py:42
 msgid "the following arguments are required"
 msgstr ""
 
-#: transcode2H265.py:43
+#: transcode2H265.py:44
 msgid "unrecognized arguments"
 msgstr ""
 
@@ -49,192 +45,202 @@ msgstr ""
 msgid "too few arguments"
 msgstr ""
 
-#: transcode2H265.py:141
+#: transcode2H265.py:49
+msgid "expected one argument"
+msgstr ""
+
+#: transcode2H265.py:145
 msgid "Finding crop dimensions..."
 msgstr ""
 
-#: transcode2H265.py:186
+#: transcode2H265.py:193
 msgid ""
 "WARNING: Deleting file {} as commanded with -r option.\n"
 "This file won't be easily recovered.\n"
 msgstr ""
 
-#: transcode2H265.py:262
+#: transcode2H265.py:269
 msgid "Removing temporary file '{}'."
 msgstr ""
 
-#: transcode2H265.py:289
+#: transcode2H265.py:296
 msgid ""
 "\n"
 "==== Transcoding finished ===="
 msgstr ""
 
-#: transcode2H265.py:291
+#: transcode2H265.py:298
 msgid "== There following files were ignored: =="
 msgstr ""
 
-#: transcode2H265.py:300
+#: transcode2H265.py:307
 msgid "== There were errors transcoding the files: =="
 msgstr ""
 
-#: transcode2H265.py:308
+#: transcode2H265.py:315
 msgid "==== Final report ===="
 msgstr ""
 
-#: transcode2H265.py:309
+#: transcode2H265.py:316
 msgid "\t {} file"
 msgstr ""
 
-#: transcode2H265.py:313
+#: transcode2H265.py:320
 msgid " transcoded OK.\n"
 msgstr ""
 
-#: transcode2H265.py:314
+#: transcode2H265.py:321
 msgid "\t {:d} file"
 msgstr ""
 
-#: transcode2H265.py:319
+#: transcode2H265.py:326
 msgid " with errors.\n"
 msgstr ""
 
-#: transcode2H265.py:329
+#: transcode2H265.py:336
 msgid ""
 "ERROR: ffmpeg is not installed in your system.\n"
 "This script can not work properly without it.\n"
 "\n"
 msgstr ""
 
-#: transcode2H265.py:333
+#: transcode2H265.py:340
 msgid ""
 "ERROR: mkvtoolnix is not installed in your system.\n"
 "This script can not work properly without it.\n"
 "\n"
 msgstr ""
 
-#: transcode2H265.py:351
+#: transcode2H265.py:358
 msgid " day "
 msgstr ""
 
-#: transcode2H265.py:354
+#: transcode2H265.py:361
 msgid " days "
 msgstr ""
 
-#: transcode2H265.py:360
+#: transcode2H265.py:367
 msgid " hour "
 msgstr ""
 
-#: transcode2H265.py:363
+#: transcode2H265.py:370
 msgid " hours "
 msgstr ""
 
-#: transcode2H265.py:369
+#: transcode2H265.py:376
 msgid " minute "
 msgstr ""
 
-#: transcode2H265.py:372
+#: transcode2H265.py:379
 msgid " minutes "
 msgstr ""
 
-#: transcode2H265.py:378
+#: transcode2H265.py:385
 msgid " second "
 msgstr ""
 
-#: transcode2H265.py:381
+#: transcode2H265.py:388
 msgid " seconds "
 msgstr ""
 
-#: transcode2H265.py:433
+#: transcode2H265.py:440
 msgid ""
-"This program transcode video files to H265 and AAC in MKV format. "
-"Subtitles, if present, are automatically detected and soft subbed into "
-"the corresponding output files."
+"This program transcode video files to H265 and AAC in MKV format. Subtitles, "
+"if present, are automatically detected and soft subbed into the "
+"corresponding output files."
 msgstr ""
 
-#: transcode2H265.py:434
+#: transcode2H265.py:441
 msgid "Input video file(s)"
 msgstr ""
 
-#: transcode2H265.py:435
+#: transcode2H265.py:442
+msgid "show this help message and exit"
+msgstr ""
+
+#: transcode2H265.py:443
 #, python-format
 msgid "X265 preset [default: %(default)s]."
 msgstr ""
 
-#: transcode2H265.py:436
+#: transcode2H265.py:444
 #, python-format
 msgid ""
 "CRF value [default: %(default)s]. Determines the output video quality. "
-"Smaller values gives better qualities and bigger file sizes, bigger "
-"values result in less quality and smaller file sizes. Default value "
-"results in a nice quality/size ratio. CRF values should be in the range "
-"of 1 to 50."
+"Smaller values gives better qualities and bigger file sizes, bigger values "
+"result in less quality and smaller file sizes. Default value results in a "
+"nice quality/size ratio. CRF values should be in the range of 1 to 50."
 msgstr ""
 
-#: transcode2H265.py:437
+#: transcode2H265.py:445
 #, python-format
 msgid ""
 "If True original video files will be erased after transcoding [default: "
 "%(default)s]. WARNING: deleted files can not be easily recovered!"
 msgstr ""
 
-#: transcode2H265.py:438
+#: transcode2H265.py:446
 #, python-format
 msgid ""
 "Default audio language for MKV files obtained (used only if the original "
 "stream languages fail to be determined) [default: %(default)s]."
 msgstr ""
 
-#: transcode2H265.py:439
+#: transcode2H265.py:447
 #, python-format
 msgid ""
-"Default subtitle language of soft-subbed subtitles (only used if original"
-" subtitle languages fail to be determined) [default: %(default)s]."
+"Default subtitle language of soft-subbed subtitles (only used if original "
+"subtitle languages fail to be determined) [default: %(default)s]."
 msgstr ""
 
-#: transcode2H265.py:440
+#: transcode2H265.py:448
 #, python-format
 msgid ""
 "Postfix to be added to newly created H.265 video files [default: "
 "%(default)s]."
 msgstr ""
 
-#: transcode2H265.py:441
+#: transcode2H265.py:449
 #, python-format
 msgid ""
-"Indicates the number of processor cores the script will use. 0 indicates "
-"to use as many as possible [default: %(default)s]."
+"Indicates the number of processor cores the script will use. 0 indicates to "
+"use as many as possible [default: %(default)s]."
 msgstr ""
 
-#: transcode2H265.py:442
+#: transcode2H265.py:450
 #, python-format
 msgid ""
-"Autocrop output files [default: %(default)s]. WARNING: Use with caution "
-"as some video files has variable width horizontal (and vertical) black "
-"bars, in those cases you will probably lose data."
-msgstr ""
-
-#: transcode2H265.py:448
-msgid "CRF values should be in the range of 1 to 50."
+"Autocrop output files [default: %(default)s]. WARNING: Use with caution as "
+"some video files has variable width horizontal (and vertical) black bars, in "
+"those cases you will probably lose data."
 msgstr ""
 
 #: transcode2H265.py:451
+msgid "show program's version number and exit"
+msgstr ""
+
+#: transcode2H265.py:456
+msgid "CRF values should be in the range of 1 to 50."
+msgstr ""
+
+#: transcode2H265.py:459
 msgid "The number of threads must be 0 or positive."
 msgstr ""
 
-#: transcode2H265.py:457
+#: transcode2H265.py:465
 msgid ""
 "\n"
 "==== Transcoding file {:d}/{:d} ===="
 msgstr ""
 
-#: transcode2H265.py:460
+#: transcode2H265.py:468
 msgid "File {} is not a proper video file.\n"
 msgstr ""
 
-#: transcode2H265.py:478
+#: transcode2H265.py:486
 msgid "Work finished in {}."
 msgstr ""
 
-#: transcode2H265.py:479
+#: transcode2H265.py:487
 msgid "Exiting OK."
 msgstr ""
-

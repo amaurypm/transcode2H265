@@ -35,20 +35,18 @@ def i18n_text_argparse(text):
     text = text.replace("usage", _("usage"))
     text = text.replace("positional arguments", _("positional arguments"))
     text = text.replace("optional arguments", _("optional arguments"))
-    text = text.replace("show this help message and exit",
-                        _("show this help message and exit"))
+    #text = text.replace("show this help message and exit",
+    #                    _("show this help message and exit"))
     text = text.replace("error", _("error"))
     text = text.replace("the following arguments are required",
                         _("the following arguments are required"))
     text = text.replace("unrecognized arguments",
                         _("unrecognized arguments"))
-    
     text = text.replace("too few arguments",
                         _("too few arguments"))
-
-    #text = text.replace("show program's version number and exit",
-    #        _("show program's version number and exit"))
-    
+    #text = text.replace("show program's version number and exit", 
+    #        _("show program's version number and exit")) # Internationalization does not work with this message. I don't know why.
+    text = text.replace("expected one argument",_("expected one argument"))
     return text
 
 gettext.gettext = i18n_text_argparse
@@ -439,8 +437,9 @@ def run_script():
     """
     check_the_required_programs()
     initial_time=time.time()
-    parser=argparse.ArgumentParser(description=_("This program transcode video files to H265 and AAC in MKV format. Subtitles, if present, are automatically detected and soft subbed into the corresponding output files."))
+    parser=argparse.ArgumentParser(description=_("This program transcode video files to H265 and AAC in MKV format. Subtitles, if present, are automatically detected and soft subbed into the corresponding output files."), add_help=False)
     parser.add_argument('video', nargs='+', help=_('Input video file(s)'))
+    parser.add_argument('-h','--help', action='help', help=_("show this help message and exit"))
     parser.add_argument('-p', '--preset', default='medium', help=_('X265 preset [default: %(default)s].'))
     parser.add_argument('-q','--crf', type=int, default=28, help=_('CRF value [default: %(default)s]. Determines the output video quality. Smaller values gives better qualities and bigger file sizes, bigger values result in less quality and smaller file sizes. Default value results in a nice quality/size ratio. CRF values should be in the range of 1 to 50.'))
     parser.add_argument('-r', '--replace-original-video-file', action='store_true', default=False, dest='replace', help=_('If True original video files will be erased after transcoding [default: %(default)s]. WARNING: deleted files can not be easily recovered!'))
@@ -449,7 +448,7 @@ def run_script():
     parser.add_argument('-x', '--filename-postfix', default='_h265', help=_('Postfix to be added to newly created H.265 video files [default: %(default)s].'))
     parser.add_argument('-t', '--threads', type=int, default=0, help=_('Indicates the number of processor cores the script will use. 0 indicates to use as many as possible [default: %(default)s].'))
     parser.add_argument('-c', '--auto-crop', action='store_true', default=False, help=_('Autocrop output files [default: %(default)s]. WARNING: Use with caution as some video files has variable width horizontal (and vertical) black bars, in those cases you will probably lose data.')) 
-    #parser.add_argument('--version', action='version', version='3.0.1', help = _("show program's version number and exit"))
+    parser.add_argument('-v', '--version', action='version', version='3.0.1', help=_("show program's version number and exit")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
     
     args=parser.parse_args()
 
