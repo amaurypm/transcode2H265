@@ -20,7 +20,7 @@ Probably, but I use this. I like it and it works well for me, if you like it too
 Just do:
 `transcode2H265.py video_file[s]`
 
-It has some options (type `transcode2H265 -h` to see them), but defaults should work in most cases. Maybe you would like to play with the `-l` option, if you are a perfectionist as myself.
+It has some options (type `transcode2H265 -h` or see below), but defaults should work in most cases.
 
 ### Options
 ```
