@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 14:29-0400\n"
-"PO-Revision-Date: 2017-04-21 14:33-0400\n"
+"POT-Creation-Date: 2017-04-21 17:04-0400\n"
+"PO-Revision-Date: 2017-04-21 17:06-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -166,8 +166,8 @@ msgstr ""
 "ficheros de salida."
 
 #: transcode2H265.py:441
-msgid "Input video file(s)"
-msgstr "Fichero(s) de video de entrada"
+msgid "Input video file(s)."
+msgstr ""
 
 #: transcode2H265.py:442
 msgid "Show this help message and exit."
@@ -264,7 +264,17 @@ msgstr "CRF solamente puede tomar valores entre 1 y 50."
 msgid "The number of threads must be 0 or positive."
 msgstr "El número de hilos debe ser 0 o positivo."
 
-#: transcode2H265.py:465
+#: transcode2H265.py:463
+msgid ""
+"Unknown preset \"{}\".\n"
+"Valid values are:\n"
+"\t{}\n"
+msgstr ""
+"preset desconocido \"{}\".\n"
+"Los valores válidos son:\n"
+"\t{}\n"
+
+#: transcode2H265.py:469
 msgid ""
 "\n"
 "==== Transcoding file {:d}/{:d} ===="
@@ -272,17 +282,20 @@ msgstr ""
 "\n"
 "==== Transcodificando el fichero {:d}/{:d} ===="
 
-#: transcode2H265.py:468
+#: transcode2H265.py:472
 msgid "File {} is not a proper video file.\n"
 msgstr "El fichero {} no es un archivo de video.\n"
 
-#: transcode2H265.py:486
+#: transcode2H265.py:490
 msgid "Work finished in {}."
 msgstr "Trabajo finalizado en {}."
 
-#: transcode2H265.py:487
+#: transcode2H265.py:491
 msgid "Exiting OK."
 msgstr "Finalizando OK."
+
+#~ msgid "Input video file(s)"
+#~ msgstr "Fichero(s) de video de entrada"
 
 #~ msgid "show this help message and exit"
 #~ msgstr "muestra este mensaje de ayuda y sale"

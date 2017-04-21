@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 14:29-0400\n"
+"POT-Creation-Date: 2017-04-21 17:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,7 +151,7 @@ msgid ""
 msgstr ""
 
 #: transcode2H265.py:441
-msgid "Input video file(s)"
+msgid "Input video file(s)."
 msgstr ""
 
 #: transcode2H265.py:442
@@ -225,20 +225,27 @@ msgstr ""
 msgid "The number of threads must be 0 or positive."
 msgstr ""
 
-#: transcode2H265.py:465
+#: transcode2H265.py:463
+msgid ""
+"Unknown preset \"{}\".\n"
+"Valid values are:\n"
+"\t{}\n"
+msgstr ""
+
+#: transcode2H265.py:469
 msgid ""
 "\n"
 "==== Transcoding file {:d}/{:d} ===="
 msgstr ""
 
-#: transcode2H265.py:468
+#: transcode2H265.py:472
 msgid "File {} is not a proper video file.\n"
 msgstr ""
 
-#: transcode2H265.py:486
+#: transcode2H265.py:490
 msgid "Work finished in {}."
 msgstr ""
 
-#: transcode2H265.py:487
+#: transcode2H265.py:491
 msgid "Exiting OK."
 msgstr ""
