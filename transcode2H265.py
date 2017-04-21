@@ -458,6 +458,10 @@ def run_script():
     if args.threads < 0:
         parser.error(_('The number of threads must be 0 or positive.'))
 
+    known_presets = ["ultrafast", "superfast", "veryfast", "faster", "fast", "medium", "slow", "slower", "veryslow"]
+    if args.preset not in known_presets:
+        parser.error(_('Unknown preset "{}".\nValid values are:\n\t{}\n').format(args.preset, '\n\t'.join(known_presets)))
+
     reporter=Reporter()
     file_counter=0
     for filename in args.video:
