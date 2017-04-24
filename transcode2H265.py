@@ -195,6 +195,10 @@ class Video:
                     os.remove(self.__in_filename)
                         
                 return True
+
+            #else:
+            #    os.remove(self.__ffmpeg_output)
+            #    self.__fmpeg_output = None
         
         return False
     
@@ -229,8 +233,8 @@ class Video:
             sys.stdout.write('> {}\n'.format(cmd_line))
             exit_status=os.system(cmd_line)
             if not exit_status:
-                os.remove(self.__ffmpeg_output)
-                self.__ffmpeg_output=None
+                #os.remove(self.__ffmpeg_output)
+                #self.__ffmpeg_output=None
                 return True        
         
         return False
@@ -274,6 +278,8 @@ class Video:
                 os.remove(sub_file)
                 
     def clean(self):
+        os.remove(self.__ffmpeg_output)
+        self.__ffmpeg_output = None
         self.__purge_int_sub_files()
     
 class Reporter:
@@ -452,7 +458,7 @@ def run_script():
     parser.add_argument('-x', '--filename-postfix', default='_h265', help=_('Postfix to be added to newly created H.265 video files [default: %(default)s].'))
     parser.add_argument('-t', '--threads', type=int, default=0, help=_('Indicates the number of processor cores the script will use. 0 indicates to use as many as possible [default: %(default)s].'))
     parser.add_argument('-c', '--auto-crop', action='store_true', default=False, help=_('Turn on autocrop function. WARNING: Use with caution as some video files has variable width horizontal (and vertical) black bars, in those cases you will probably lose data.')) 
-    parser.add_argument('-v', '--version', action='version', version='3.2.1', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
+    parser.add_argument('-v', '--version', action='version', version='3.2.2', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
     
     args=parser.parse_args()
 
@@ -480,10 +486,12 @@ def run_script():
         video.set_transcoding_options(args.preset, args.crf, args.replace, args.avlang, args.slang, args.filename_postfix, args.threads, args.auto_crop)
         if video.transcode():
             reporter.count_file_ok()
-            video.clean()
+            #video.clean()
             
         else:
             reporter.add_file_with_errors(filename)
+
+        video.clean() # Always clean, not only in success, please...
             
         print(75*'=')
             
