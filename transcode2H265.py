@@ -23,6 +23,7 @@ import time
 import random
 import subprocess
 import gettext
+import string
 
 ## Setting internationalization
 localedir = os.path.join(os.path.abspath(os.path.dirname(os.path.realpath(__file__))), 'locale')
@@ -74,7 +75,7 @@ class Video:
         self.__default_slang='spa'        
         self.__slangs = {} # To support multiple subtitles.
         self.__ffmpeg_output_ext='.mkv'
-        self.__ffmpeg_output_postfix='_tmp-transcode2H265'
+        self.__ffmpeg_output_postfix='_tmp_' + random_string(10)
         self.__ffmpeg_output=os.path.splitext(self.__in_filename)[0]+self.__ffmpeg_output_postfix+self.__ffmpeg_output_ext
         self.__replace_original=False
         self.__output_postfix=None
@@ -162,10 +163,10 @@ class Video:
                         if sub_type in ['ASS','SSA', 'SubStationAlpha']:
                             sub_ext='.ass'
                             
-                        while(os.path.isfile(in_filename_root+"_"+str(n)+sub_ext)):
-                            n+=1
+                        #while(os.path.isfile(in_filename_root+"_"+str(n)+sub_ext)):
+                        #    n+=1
                             
-                        sub_filename = in_filename_root+"_"+str(n)+sub_ext
+                        sub_filename = in_filename_root + "_tmp_" + random_string(10) + sub_ext
                             
                         os.system("mkvextract tracks \"{}\" {:d}:\"{}\"".format(self.__in_filename, track_id, sub_filename))
                         
@@ -249,7 +250,7 @@ class Video:
     def __get_crop_data(self):
         crop_data=None
         crop_list=[]
-        tmp_output_filename=os.path.splitext(self.__in_filename)[0]+'_tmp_transcode2H265-autocrop.mkv'
+        tmp_output_filename=os.path.splitext(self.__in_filename)[0] + '_tmp_' + random_string(10)  +'_autocrop.mkv'
         input_duration=self.__in_duration
         if input_duration:
             ss_list=[input_duration/x for x in random.sample(range(1,100),5)] # Cheacking autocrop in 5 random sites in the video.
@@ -442,6 +443,13 @@ def dstring2dint(duration_string):
     hours,minutes,seconds=int(hours),int(minutes),int(round(float(seconds)))
     duration_seconds=3600*hours+60*minutes+seconds
     return duration_seconds
+
+def random_string(length = 10):
+    rand_string = ''
+    for letter in random.sample(string.ascii_lowercase + string.ascii_uppercase + string.digits, length):
+        rand_string += letter
+
+    return rand_string
 
 def run_script():
     """Function to be called to actually run the script.
