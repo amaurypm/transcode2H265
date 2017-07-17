@@ -182,7 +182,7 @@ class Video:
                 cmd_line+=' -vf crop={}'.format(self.__crop_data)
                 
             #cmd_line+=' -acodec aac -ar 48k -ab 192k -strict experimental -sn -threads {:d} -y \"{}\"'.format(self.__threads, self.__ffmpeg_output)
-            cmd_line+=' -c:a aac -ar 48k -b:a 192k -strict experimental -sn -threads {:d} -y \"{}\"'.format(self.__threads, self.__ffmpeg_output)
+            cmd_line+=' -c:a aac -ar 48k -b:a 192k -strict experimental -max_muxing_queue_size 9999 -sn -threads {:d} -y \"{}\"'.format(self.__threads, self.__ffmpeg_output)
             
             sys.stdout.write('> {}\n'.format(cmd_line))
             exit_code=os.system(cmd_line)
@@ -471,7 +471,7 @@ def run_script():
     parser.add_argument('-x', '--filename-postfix', default='_h265', help=_('Postfix to be added to newly created H.265 video files [default: %(default)s].'))
     parser.add_argument('-t', '--threads', type=int, default=0, help=_('Indicates the number of processor cores the script will use. 0 indicates to use as many as possible [default: %(default)s].'))
     parser.add_argument('-c', '--auto-crop', action='store_true', default=False, help=_('Turn on autocrop function. WARNING: Use with caution as some video files has variable width horizontal (and vertical) black bars, in those cases you will probably lose data.')) 
-    parser.add_argument('-v', '--version', action='version', version='3.2.5', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
+    parser.add_argument('-v', '--version', action='version', version='3.2.6', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
     
     args=parser.parse_args()
 
