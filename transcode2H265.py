@@ -159,6 +159,10 @@ class Video:
                         track_id=int(line.strip().split(":")[0].split()[-1])
                         sub_type=line.strip().split('(')[1].split(")")[0]
                         slang = line[line.index("language:"):].split(':')[1].split()[0]
+                        if slang:
+                            if "unk" in slang.lower() or "und" in slang.lower():
+                                    slang = None
+
                         sub_ext='.srt'
                         if sub_type in ['ASS','SSA', 'SubStationAlpha']:
                             sub_ext='.ass'
@@ -171,7 +175,9 @@ class Video:
                         os.system("mkvextract tracks \"{}\" {:d}:\"{}\"".format(self.__in_filename, track_id, sub_filename))
                         
                         self.__int_sub_files.append(sub_filename)
-                        self.__slangs[sub_filename] = slang
+                        
+                        if slang:
+                            self.__slangs[sub_filename] = slang
                         
                         
     def transcode(self):
@@ -471,7 +477,7 @@ def run_script():
     parser.add_argument('-x', '--filename-postfix', default='_h265', help=_('Postfix to be added to newly created H.265 video files [default: %(default)s].'))
     parser.add_argument('-t', '--threads', type=int, default=0, help=_('Indicates the number of processor cores the script will use. 0 indicates to use as many as possible [default: %(default)s].'))
     parser.add_argument('-c', '--auto-crop', action='store_true', default=False, help=_('Turn on autocrop function. WARNING: Use with caution as some video files has variable width horizontal (and vertical) black bars, in those cases you will probably lose data.')) 
-    parser.add_argument('-v', '--version', action='version', version='3.2.6', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
+    parser.add_argument('-v', '--version', action='version', version='3.2.7', help=_("Show program's version number and exit.")) # I need to use this explicit help message here (together with setting add_help=False when creating the parser) to be able to proper translate the version help message (when required). All other messages are translated OK, but not this one. With this edit now everything is OK.
     
     args=parser.parse_args()
 
