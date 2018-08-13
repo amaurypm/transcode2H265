@@ -64,5 +64,6 @@ optional arguments:
 ```
 
 ## Is it just in English?
-In English and Spanish, depending of your locale. I just speak this two languages, so, if you like it in other, you can always contribute...
+In English and Spanish, depending of your locale. I just speak these two languages, so, if you like it in other, you can always contribute...
+
 
